@@ -41,7 +41,7 @@ const ConversionTimed = ({ children, affectedExperiments, conversionName, durati
         };
     }, []);
 
-    return <div>{children}</div>;
+    return (<div>{children}</div>);
 };
 
 export default ConversionTimed;

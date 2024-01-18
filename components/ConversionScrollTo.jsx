@@ -38,7 +38,7 @@ const ConversionScrollTo = ({ children, affectedExperiments, conversionName }) =
         };
     }, []);
 
-    return <div ref={ref}>{children}</div>;
+    return (<div ref={ref}>{children}</div>);
 };
 
 export default ConversionScrollTo;

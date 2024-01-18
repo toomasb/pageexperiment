@@ -25,7 +25,7 @@ const ConversionClick = React.forwardRef(({ children, onClick, affectedExperimen
         });
     };
 
-    return <div ref={ref} onClick={handleClick}>{children}</div>;
+    return (<div ref={ref} onClick={handleClick}>{children}</div>);
 
 });
 
