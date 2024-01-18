@@ -27,7 +27,7 @@ const ConversionClick = ({ children, onClick, affectedExperiments, conversionNam
 
     return (<div onClick={handleClick}>{children}</div>);
 
-});
+};
 
 export default ConversionClick;
 
