@@ -6,7 +6,7 @@ import { useABTest } from './PageExperimentContextClient';
 import { sendConversionData } from '../utils/sendConversionData';
 
 
-const ConversionClick = React.forwardRef(({ children, onClick, affectedExperiments, conversionName }, ref) => {
+const ConversionClick = ({ children, onClick, affectedExperiments, conversionName }) => {
     const { pageExperimentConfig, apiKey } = useABTest();
 
     const handleClick = async (e) => {
@@ -25,7 +25,7 @@ const ConversionClick = React.forwardRef(({ children, onClick, affectedExperimen
         });
     };
 
-    return (<div ref={ref} onClick={handleClick}>{children}</div>);
+    return (<div onClick={handleClick}>{children}</div>);
 
 });
 
