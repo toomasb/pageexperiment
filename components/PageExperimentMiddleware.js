@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 
 
-export function PageExperimentMiddleware(req, res, experiments) {
+export function PageExperimentMiddleware(req, experiments) {
 
     console.log(experiments)
 
