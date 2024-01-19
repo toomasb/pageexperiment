@@ -1,5 +1,3 @@
-import React from "react";
-var __jsx = React.createElement;
 import { headers } from 'next/headers';
 import { PageExperimentProvider } from './PageExperimentContextClient';
 export var PageExperimentContext = function PageExperimentContext(_ref) {
@@ -13,7 +11,7 @@ export var PageExperimentContext = function PageExperimentContext(_ref) {
   } catch (e) {
     console.error('Error parsing A/B test config:', e);
   }
-  return __jsx(PageExperimentProvider, {
+  return /*#__PURE__*/React.createElement(PageExperimentProvider, {
     pageExperimentConfig: pageExperimentConfig,
     apiKey: apiKey
   }, children);

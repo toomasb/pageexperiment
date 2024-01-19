@@ -1,7 +1,5 @@
 'use client';
 
-import React from "react";
-var __jsx = React.createElement;
 import { useABTest } from './PageExperimentContextClient';
 var TestA = function TestA(_ref) {
   var children = _ref.children,
@@ -10,6 +8,6 @@ var TestA = function TestA(_ref) {
     pageExperimentConfig = _useABTest.pageExperimentConfig,
     apiKey = _useABTest.apiKey;
   var isVariantA = pageExperimentConfig["experiment_variants"][experimentName] === 'A' || !pageExperimentConfig["experiment_variants"][experimentName];
-  return isVariantA ? __jsx(React.Fragment, null, children) : null;
+  return isVariantA ? /*#__PURE__*/React.createElement(React.Fragment, null, children) : null;
 };
 export default TestA;
