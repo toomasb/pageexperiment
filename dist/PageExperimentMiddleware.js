@@ -1,18 +1,12 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PageExperimentMiddleware = PageExperimentMiddleware;
-var _server = require("next/server");
-var _uuid = require("uuid");
-function PageExperimentMiddleware(req, experiments) {
+import { NextResponse } from 'next/server';
+import { v4 as uuidv4 } from 'uuid';
+export function PageExperimentMiddleware(req, experiments) {
   var _req$cookies$get;
   console.log(experiments);
-  var response = _server.NextResponse.next();
+  var response = NextResponse.next();
   var visitor_guid = (_req$cookies$get = req.cookies.get('pageExperiment_visitor_guid')) === null || _req$cookies$get === void 0 ? void 0 : _req$cookies$get.value;
   if (!visitor_guid) {
-    visitor_guid = (0, _uuid.v4)();
+    visitor_guid = uuidv4();
     response.cookies.set('pageExperiment_visitor_guid', visitor_guid, {
       path: '/',
       httpOnly: true
