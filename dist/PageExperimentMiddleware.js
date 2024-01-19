@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.PageExperimentMiddleware = PageExperimentMiddleware;
+exports["default"] = void 0;
 var _server = require("next/server");
 var _uuid = require("uuid");
 function PageExperimentMiddleware(req, experiments) {
@@ -37,3 +37,4 @@ function PageExperimentMiddleware(req, experiments) {
   }));
   return response;
 }
+var _default = exports["default"] = PageExperimentMiddleware;

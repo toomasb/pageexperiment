@@ -1,5 +1,6 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -24,13 +25,13 @@ Object.defineProperty(exports, "ConversionTimed", {
 Object.defineProperty(exports, "PageExperimentContext", {
   enumerable: true,
   get: function get() {
-    return _PageExperimentContext.PageExperimentContext;
+    return _PageExperimentContext["default"];
   }
 });
 Object.defineProperty(exports, "PageExperimentMiddleware", {
   enumerable: true,
   get: function get() {
-    return _PageExperimentMiddleware.PageExperimentMiddleware;
+    return _PageExperimentMiddleware["default"];
   }
 });
 Object.defineProperty(exports, "TestA", {
@@ -50,6 +51,5 @@ var _TestB = _interopRequireDefault(require("./TestB"));
 var _ConversionClick = _interopRequireDefault(require("./ConversionClick"));
 var _ConversionScrollTo = _interopRequireDefault(require("./ConversionScrollTo"));
 var _ConversionTimed = _interopRequireDefault(require("./ConversionTimed"));
-var _PageExperimentContext = require("./PageExperimentContext");
-var _PageExperimentMiddleware = require("./PageExperimentMiddleware");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _PageExperimentContext = _interopRequireDefault(require("./PageExperimentContext"));
+var _PageExperimentMiddleware = _interopRequireDefault(require("./PageExperimentMiddleware"));
