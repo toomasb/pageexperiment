@@ -3,7 +3,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useABTest } from './PageExperimentContextClient';
-import { sendConversionData } from '../utils/sendConversionData';
+import { sendConversionData } from './utils/sendConversionData';
 
 const ConversionScrollTo = ({ children, affectedExperiments, conversionName }) => {
     const ref = useRef(null);

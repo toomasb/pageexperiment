@@ -3,7 +3,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useABTest } from './PageExperimentContextClient';
-import { sendConversionData } from '../utils/sendConversionData';
+import { sendConversionData } from './utils/sendConversionData';
 
 const ConversionTimed = ({ children, affectedExperiments, conversionName, durationInSeconds }) => {
     const timerRef = useRef(null);

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { useABTest } from './PageExperimentContextClient';
-import { sendConversionData } from '../utils/sendConversionData';
+import { sendConversionData } from './utils/sendConversionData';
 
 
 const ConversionClick = ({ children, onClick, affectedExperiments, conversionName }) => {

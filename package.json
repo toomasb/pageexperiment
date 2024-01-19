@@ -2,21 +2,38 @@
   "name": "pageexperiment",
   "version": "0.1.8",
   "private": false,
+  "main": "dist/index.js", 
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "babel components --out-dir dist --copy-files"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "next": "^14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toomasb/pageexperiment.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "pageexperiment",
+    "a/b testing",
+    "ab testing",
+    "experiment",
+    "page experiment",
+    "analytics",
+    "tracking",
+    "funnel"
+  ],
+  "author": "Thomas <hello@pageexperiment.com>"
 }
