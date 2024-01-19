@@ -1,17 +1,7 @@
-import TestA from './TestA';
-import TestB from './TestB';
-import ConversionClick from './ConversionClick';
-import ConversionScrollTo from './ConversionScrollTo';
-import ConversionTimed from './ConversionTimed';
-import { PageExperimentContext } from './PageExperimentContext';
-import { PageExperimentMiddleware } from './PageExperimentMiddleware';
-
-export {
-  TestA,
-  TestB,
-  ConversionClick,
-  ConversionScrollTo,
-  ConversionTimed,
-  PageExperimentContext,
-  PageExperimentMiddleware
-};
+export { default as TestA } from './TestA';
+export { default as TestB } from './TestB';
+export { default as ConversionClick } from './ConversionClick';
+export { default as ConversionScrollTo } from './ConversionScrollTo';
+export { default as ConversionTimed } from './ConversionTimed';
+export { default as PageExperimentContext } from './PageExperimentContext';
+export { default as PageExperimentMiddleware } from './PageExperimentMiddleware';

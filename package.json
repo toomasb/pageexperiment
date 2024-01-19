@@ -1,8 +1,8 @@
 {
   "name": "pageexperiment",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
-  "main": "dist/index.js", 
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel components --out-dir dist --copy-files"
   },
@@ -17,11 +17,10 @@
   "dependencies": {
     "uuid": "^9.0.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/toomasb/pageexperiment.git"
+    "url": "git+https://github.com/toomasb/pageexperiment.git"
   },
   "keywords": [
     "nextjs",

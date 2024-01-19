@@ -3,7 +3,7 @@
 import { headers } from 'next/headers';
 import { PageExperimentProvider } from './PageExperimentContextClient';
 
-export const PageExperimentContext = ({ children, apiKey }) => {
+const PageExperimentContext = ({ children, apiKey }) => {
 
   const headersList = headers();
   const pageExperimentConfigJson = headersList.get('X-PageExperiment-Config');
@@ -21,3 +21,5 @@ export const PageExperimentContext = ({ children, apiKey }) => {
     </PageExperimentProvider>
   );
 };
+
+export default PageExperimentContext;
