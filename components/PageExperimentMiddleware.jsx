@@ -9,9 +9,7 @@ export function PageExperimentMiddleware(req, experiments) {
     const response = NextResponse.next();
 
     let visitor_guid = req.cookies.get('pageExperiment_visitor_guid')?.value;
-    console.log('xx')
-    console.log(req.cookies)
-    console.log(visitor_guid)
+
     if (!visitor_guid) {
         visitor_guid = uuidv4();
         response.cookies.set('pageExperiment_visitor_guid', visitor_guid, { path: '/', httpOnly: true });
