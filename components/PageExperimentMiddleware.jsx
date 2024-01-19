@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 
-function PageExperimentMiddleware(req, experiments) {
+
+export function PageExperimentMiddleware(req, experiments) {
 
     console.log(experiments)
 
@@ -31,5 +32,3 @@ function PageExperimentMiddleware(req, experiments) {
 
     return response;
 }
-
-export default PageExperimentMiddleware;
