@@ -16,6 +16,6 @@ var TestB = function TestB(_ref) {
     pageExperimentConfig = _useABTest.pageExperimentConfig,
     apiKey = _useABTest.apiKey;
   var isVariantB = pageExperimentConfig["experiment_variants"][experimentName] === 'B';
-  return isVariantB ? __jsx("div", null, children) : null;
+  return isVariantB ? __jsx(_react["default"].Fragment, null, children) : null;
 };
 var _default = exports["default"] = TestB;

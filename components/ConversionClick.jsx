@@ -5,15 +5,15 @@ import React from 'react';
 import { useABTest } from './PageExperimentContextClient';
 import { sendConversionData } from './utils/sendConversionData';
 
-
 const ConversionClick = ({ children, onClick, affectedExperiments, conversionName }) => {
     const { pageExperimentConfig, apiKey } = useABTest();
 
-    const handleClick = async (e) => {
-
+    const handleClick = async (e, childOnClick) => {
         e.stopPropagation();
 
-        onClick && onClick(e, experimentData);
+        if (childOnClick) {
+            childOnClick(e);
+        }
 
         await sendConversionData({
             apiKey,
@@ -25,8 +25,14 @@ const ConversionClick = ({ children, onClick, affectedExperiments, conversionNam
         });
     };
 
-    return (<div onClick={handleClick}>{children}</div>);
+    // Cloning the child element and injecting the new onClick handler
+    const childrenWithProps = React.Children.map(children, child => {
+        return React.cloneElement(child, { 
+            onClick: (e) => handleClick(e, child.props.onClick) 
+        });
+    });
 
+    return <>{childrenWithProps}</>;
 };
 
 export default ConversionClick;

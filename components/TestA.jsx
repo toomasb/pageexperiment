@@ -7,7 +7,7 @@ const TestA = ({ children, experimentName }) => {
 
     const isVariantA = pageExperimentConfig["experiment_variants"][experimentName] === 'A' || !pageExperimentConfig["experiment_variants"][experimentName];
 
-    return (isVariantA ? <div>{children}</div> : null);
+    return (isVariantA ? <>{children}</> : null);
 };
 
 export default TestA;

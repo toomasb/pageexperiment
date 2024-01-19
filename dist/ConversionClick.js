@@ -22,12 +22,14 @@ var ConversionClick = function ConversionClick(_ref) {
     pageExperimentConfig = _useABTest.pageExperimentConfig,
     apiKey = _useABTest.apiKey;
   var handleClick = /*#__PURE__*/function () {
-    var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(e) {
+    var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(e, childOnClick) {
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             e.stopPropagation();
-            onClick && onClick(e, experimentData);
+            if (childOnClick) {
+              childOnClick(e);
+            }
             _context.next = 4;
             return (0, _sendConversionData.sendConversionData)({
               apiKey: apiKey,
@@ -43,12 +45,19 @@ var ConversionClick = function ConversionClick(_ref) {
         }
       }, _callee);
     }));
-    return function handleClick(_x) {
+    return function handleClick(_x, _x2) {
       return _ref2.apply(this, arguments);
     };
   }();
-  return __jsx("div", {
-    onClick: handleClick
-  }, children);
+
+  // Cloning the child element and injecting the new onClick handler
+  var childrenWithProps = _react["default"].Children.map(children, function (child) {
+    return /*#__PURE__*/_react["default"].cloneElement(child, {
+      onClick: function onClick(e) {
+        return handleClick(e, child.props.onClick);
+      }
+    });
+  });
+  return __jsx(_react["default"].Fragment, null, childrenWithProps);
 };
 var _default = exports["default"] = ConversionClick;
