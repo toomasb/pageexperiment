@@ -8,14 +8,14 @@ import { sendConversionData } from './utils/sendConversionData';
 const ConversionClick = ({ children, onClick, affectedExperiments, conversionName }) => {
     const { pageExperimentConfig, apiKey } = useABTest();
 
-    const handleClick = async (e, childOnClick) => {
+    const handleClick = (e, childOnClick) => {
         e.stopPropagation();
 
         if (childOnClick) {
             childOnClick(e);
         }
 
-        await sendConversionData({
+        sendConversionData({
             apiKey,
             pageExperimentConfig,
             affectedExperiments,

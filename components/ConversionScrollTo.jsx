@@ -11,9 +11,9 @@ const ConversionScrollTo = ({ children, affectedExperiments, conversionName }) =
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(async entry => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    await sendConversionData({
+                    sendConversionData({
                         apiKey,
                         pageExperimentConfig,
                         affectedExperiments,

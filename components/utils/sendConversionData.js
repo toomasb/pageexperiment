@@ -1,13 +1,13 @@
 // utils/sendConversionData.js
 
-export const sendConversionData = async ({ apiKey, pageExperimentConfig, affectedExperiments, conversionName, conversionType, durationInSeconds }) => {
+export const sendConversionData = ({ apiKey, pageExperimentConfig, affectedExperiments, conversionName, conversionType, durationInSeconds }) => {
     const experimentData = affectedExperiments.map(experiment => ({
         name: experiment,
         variant: pageExperimentConfig["experiment_variants"][experiment] || 'A'
     }));
 
     try {
-        const response = await fetch('https://www.pageexperiment.com/api/tracking/v0', {
+        const response = fetch('https://www.pageexperiment.com/api/tracking/v0', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

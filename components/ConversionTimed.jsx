@@ -25,8 +25,8 @@ const ConversionTimed = ({ children, affectedExperiments, conversionName, durati
             durationInMilliseconds = durationInSeconds * 1000;
         }
 
-        timerRef.current = setTimeout(async () => {
-            await sendConversionData({
+        timerRef.current = setTimeout(() => {
+            sendConversionData({
                 apiKey,
                 pageExperimentConfig,
                 affectedExperiments,
