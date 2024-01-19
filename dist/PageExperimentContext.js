@@ -1,16 +1,15 @@
 "use strict";
-'use server';
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.PageExperimentContext = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _headers = require("next/headers");
 var _PageExperimentContextClient = require("./PageExperimentContextClient");
 var __jsx = _react["default"].createElement;
-var PageExperimentContext = function PageExperimentContext(_ref) {
+var PageExperimentContext = exports.PageExperimentContext = function PageExperimentContext(_ref) {
   var children = _ref.children,
     apiKey = _ref.apiKey;
   var headersList = (0, _headers.headers)();
@@ -26,4 +25,3 @@ var PageExperimentContext = function PageExperimentContext(_ref) {
     apiKey: apiKey
   }, children);
 };
-var _default = exports["default"] = PageExperimentContext;

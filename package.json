@@ -1,6 +1,6 @@
 {
   "name": "pageexperiment",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": false,
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,11 @@
   "dependencies": {
     "uuid": "^9.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/toomasb/pageexperiment.git"

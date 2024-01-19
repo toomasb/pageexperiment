@@ -25,13 +25,13 @@ Object.defineProperty(exports, "ConversionTimed", {
 Object.defineProperty(exports, "PageExperimentContext", {
   enumerable: true,
   get: function get() {
-    return _PageExperimentContext["default"];
+    return _PageExperimentContext.PageExperimentContext;
   }
 });
 Object.defineProperty(exports, "PageExperimentMiddleware", {
   enumerable: true,
   get: function get() {
-    return _PageExperimentMiddleware["default"];
+    return _PageExperimentMiddleware.PageExperimentMiddleware;
   }
 });
 Object.defineProperty(exports, "TestA", {
@@ -51,5 +51,5 @@ var _TestB = _interopRequireDefault(require("./TestB"));
 var _ConversionClick = _interopRequireDefault(require("./ConversionClick"));
 var _ConversionScrollTo = _interopRequireDefault(require("./ConversionScrollTo"));
 var _ConversionTimed = _interopRequireDefault(require("./ConversionTimed"));
-var _PageExperimentContext = _interopRequireDefault(require("./PageExperimentContext"));
-var _PageExperimentMiddleware = _interopRequireDefault(require("./PageExperimentMiddleware"));
+var _PageExperimentContext = require("./PageExperimentContext");
+var _PageExperimentMiddleware = require("./PageExperimentMiddleware");
